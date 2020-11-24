@@ -13,6 +13,7 @@ class HelloController {
     fun blog(model: Model): String {
         model["title"] = "Blog"
         logger.info("Sample of log message")
+        logger.error("Error messages go here")
         return "blog"
     }
 }

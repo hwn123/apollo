@@ -1,6 +1,6 @@
 package com.kalvinov.apollo
 
-import org.slf4j.LoggerFactory
+import org.slf4j.LoggerFactory.getLogger
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set
@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
 class HelloController {
-    private val logger = LoggerFactory.getLogger(javaClass)
+    companion object {
+        @Suppress("JAVA_CLASS_ON_COMPANION")
+        @JvmStatic
+        private val logger = getLogger(javaClass.enclosingClass)
+    }
     @GetMapping("/")
     fun blog(model: Model): String {
         model["title"] = "Blog"

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.kalvinov</groupId>
     <artifactId>apollo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>apollo</name>
     <description>Demo project for Spring Boot</description>
 
@@ -58,6 +58,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
